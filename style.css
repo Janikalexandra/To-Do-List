@@ -1,0 +1,109 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*page background*/
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#cc8d2f, #ac148b);
+    padding: 10px;
+}
+/*Background for To-Do List*/
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+/*To-Do List text properties*/
+.todo-app h2{
+    color: #e442a6;
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/*To-Do List image properties*/
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+/*Input text field background properties*/
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+/*Input text field properties*/
+input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding:10px;
+    font-weight: 14px;
+}
+/*Add button properties*/
+button{
+    border:none;
+    outline: none;
+    padding:16px 50px;
+    background: #ff5945;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;;
+}
+/*List of tasks properties*/
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content:'';
+    position:absolute;
+    height:28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: url(Images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left: 8px;
+}
+/*Task is checked done properties*/
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(Images/checked.png);
+}
+/*the X icon in the task*/
+ul li span{
+    position: absolute;
+    right:0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:#555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+}
+/*the X icon in the task when mouse is hovering over it*/
+ul li span:hover{
+    background: #edeef0;
+}
